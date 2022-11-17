@@ -1,5 +1,5 @@
 ## Bazel 的demo
-- 这里是一个简单的 Bazel 编译demo.
+- 这里是一个稍微进阶的 Bazel 编译demo.
 - 安装 Bazel
   - Arch: 
     ```c++

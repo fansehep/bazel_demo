@@ -6,3 +6,8 @@ HELLO_BAZEL_COPTS = [
   "-O2",
   "-g",
 ]
+
+HELLO_BAZEL_TEST_COPTS = [
+  "-fno-exceptions",
+  "-std=c++14",
+]

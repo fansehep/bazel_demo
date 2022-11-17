@@ -1,0 +1,20 @@
+package(default_visibility=["//visibility:public"])
+
+load("//:copts.bzl", "HELLO_BAZEL_COPTS")
+load("//:copts.bzl", "HELLO_BAZEL_TEST_COPTS")
+
+
+
+cc_test(
+  name = "glog_test",
+  srcs = glob(["glog_test.cpp"]),
+  visibility = ["//visibility:public"],
+  copts = HELLO_BAZEL_COPTS + HELLO_BAZEL_TEST_COPTS,
+  deps = [
+    "//src/module_1:hello_bazel_lib",
+    "@com_github_glog_glog//:glog",
+  ],
+  linkopts = [
+    "-lpthread",
+  ],
+)
