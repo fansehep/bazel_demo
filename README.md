@@ -15,3 +15,9 @@
     bazel build "..."
     ./bazel-bin/src/module_2/hello_bazel
   ```
+
+- 好的, 勇者, 在欣赏完了简单的demo, 让我们进阶一点点吧
+  ```bash
+    git checkout advanced
+    bazel build "..."
+  ```
