@@ -1,0 +1,14 @@
+package(default_visibility=["//visibility:public"])
+
+load("//:copts.bzl", "HELLO_BAZEL_COPTS")
+
+cc_library(
+  name = "hello_bazel_lib",
+  hdrs = glob(["hello_bazel.h"]),
+  srcs = glob(["hello_bazel.c"]),
+  visibility = ["//visibility:public"],
+  copts = HELLO_BAZEL_COPTS,
+  linkopts = [
+    "-lpthread",
+  ],
+)

@@ -1,0 +1,13 @@
+package(default_visibility=["//visibility:public"])
+
+load("//:copts.bzl", "HELLO_BAZEL_COPTS")
+
+cc_binary(
+  name = "hello_bazel",
+  srcs = glob(["main.c"]),
+  visibility = ["//visibility:public"],
+  copts = HELLO_BAZEL_COPTS,
+  deps = [
+    "//src/module_1:hello_bazel_lib",
+  ],
+)
